@@ -1,8 +1,4 @@
 <?php
-//Send a 405 Method Not Allowed header using http_response_code.
-http_response_code(405);
-//Kill the script.
-exit;
 echo 'username: ', $_POST['username'];
 echo '<br>';
 echo 'password: ', $_POST['password'];
