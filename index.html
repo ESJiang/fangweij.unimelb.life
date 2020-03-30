@@ -1,19 +1,30 @@
-<doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Hacker Fangwei Jiang</title>
+    <meta charset="utf-8">
+    <title>welcome to system login page</title>
 </head>
-<style type="text/css">
-    body
+<style>
+    form
     {
-        background-color:green;
+        border:#aaa solid 1px;
+        margin: 20px auto;
+        padding:30px;
+        width:300px;
     }
 </style>
-   <body>
-   <center><img src="https://media.giphy.com/media/ADvu1RQij9dM4/giphy.gif" width="500" height="375"></center>
-   </br></br>
-   <center><b><font face="courier new" size="6px" color="red">Hacker Fangwei Jiang</font></b></center>
-   </br></br>
-   </br></br>
-   </body>
-   </html>
+<body>
+
+    <form method = "post" action="judge.php">
+        <p>
+            please enter your username:<input type="text" name="username">
+        </p>
+        <p>
+            please enter your password:<input type="password" name="password">
+        </p>
+        <p>
+            <button type="submit">login</button>
+        </p>
+    </form>
+</body>
+</html>
