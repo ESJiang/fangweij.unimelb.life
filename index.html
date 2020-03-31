@@ -1,12 +1,30 @@
-Hi. Share a message with our bot!
-</br>
-</br>
-<a href="message.php">Test out the message page here!</a>
-</br>
-</br>
-<form action="send.php">
-	<label>Message for the bot: </label>
-	<input type="text" name="link">
-	</br>
-	<input type="submit" name="submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>welcome to system login page</title>
+</head>
+<style>
+    form
+    {
+        border:#aaa solid 1px;
+        margin: 20px auto;
+        padding:30px;
+        width:300px;
+    }
+</style>
+<body>
+
+    <form method = "post" action="judge.php">
+        <p>
+            please enter your username:<input type="text" name="username">
+        </p>
+        <p>
+            please enter your password:<input type="password" name="password">
+        </p>
+        <p>
+            <button type="submit">login</button>
+        </p>
+    </form>
+</body>
+</html>
